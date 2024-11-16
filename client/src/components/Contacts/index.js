@@ -7,13 +7,13 @@ const Contacts = () => {
     const [contacts, setContacts] = useState([])
 
     useEffect(() => {
-        axios.get("http://localhost:3002")
+        axios.get("https://contact-backend-ju7z.onrender.com")
         .then(result => setContacts(result.data))
         .catch(err => console.log(err))
     }, [])
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3002/deleteUser/' + id)
+        axios.delete('https://contact-backend-ju7z.onrender.com/deleteUser/' + id)
         .then(res => {console.log(res)
             window.location.reload()
         })
