@@ -14,7 +14,7 @@ const UpdateContact = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('http://localhost:3002/getUser/' + id )
+        axios.get('https://contact-backend-ju7z.onrender.com/getUser/' + id )
         .then(result => {
             setFirstName(result.data.FirstName)
             setLastName(result.data.LastName)
@@ -28,7 +28,7 @@ const UpdateContact = () => {
 
     const Update = (e) => {
         e.preventDefault();
-        axios.put("http://localhost:3002/updateUser/" + id, {FirstName, LastName, Email, PhoneNumber, Company, JobTitle})
+        axios.put("https://contact-backend-ju7z.onrender.com/updateUser/" + id, {FirstName, LastName, Email, PhoneNumber, Company, JobTitle})
         .then(result => {
           console.log(result)
           navigate('/')
