@@ -14,7 +14,7 @@ const CreateContact = () => {
 
     const Submit = (e) => {
           e.preventDefault();
-          axios.post("http://localhost:3002/createUser", {FirstName, LastName, Email, PhoneNumber, Company, JobTitle})
+          axios.post("https://contact-backend-ju7z.onrender.com/createUser", {FirstName, LastName, Email, PhoneNumber, Company, JobTitle})
           .then(result => {
             console.log(result)
             navigate('/')
